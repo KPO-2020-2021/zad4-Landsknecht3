@@ -2,36 +2,32 @@
 
 #include "size.hh"
 #include <iostream>
+#include <cmath>
 
-class Vector {
-
+template <typename TYPE, unsigned int SIZE>
+class Vector
+{
 private:
-
-    double size[SIZE];     //Tablica wektora
-
+    TYPE coor[SIZE];
 public:
-
     Vector();
 
     Vector(double [SIZE]);
 
-    Vector operator + (const Vector &v);
+    Vector operator +(const Vector &v);
 
-    Vector operator - (const Vector &v);
+    Vector operator -(const Vector &v);
 
-    Vector operator * (const double &tmp);
+    Vector operator *(const TYPE &mul);
 
-    Vector operator / (const double &tmp);
+    Vector operator /(const TYPE &div);
 
-    const double &operator [] (int index) const;
+    const double &operator [] (unsigned int index) const;
 
-    double &operator [] (int index);
+    double &operator [] (unsigned int index);
 
 };
 
-std::ostream &operator << (std::ostream &out, Vector const &tmp);
-
-std::istream &operator >> (std::istream &in, Vector &tmp);
 
 /******************************************************************************
  |  Konstruktor klasy Vector.                                                 |
@@ -40,9 +36,10 @@ std::istream &operator >> (std::istream &in, Vector &tmp);
  |  Zwraca:                                                                   |
  |      Tablice wypelniona wartoscia 0.                                       |
  */
-Vector::Vector() {
-    for (int i = 0; i < SIZE; ++i) {
-        size[i] = 0;
+template<typename TYPE, unsigned int SIZE>
+Vector<TYPE, SIZE>::Vector() {
+    for (unsigned int i = 0; i < SIZE; ++i) {
+        coor[i] = 0;
     }
 }
 
@@ -55,9 +52,10 @@ Vector::Vector() {
  |      Tablice wypelniona wartosciami podanymi w argumencie.                 |
  */
 
-Vector::Vector(double tmp[SIZE]) {
-    for (int i = 0; i < SIZE; ++i) {
-        size[i] = tmp[i];
+template<typename TYPE, unsigned int SIZE>
+Vector<TYPE, SIZE>::Vector(double tmp[SIZE]) {
+    for (unsigned int i = 0; i < SIZE; ++i) {
+        coor[i] = tmp[i];
     }
 }
 
@@ -71,10 +69,11 @@ Vector::Vector(double tmp[SIZE]) {
  |      Sume dwoch skladnikow przekazanych jako wskaznik                      |
  |      na parametr.                                                          |
  */
-Vector Vector::operator + (const Vector &v) {
+template<typename TYPE, unsigned int SIZE>
+Vector<TYPE, SIZE> Vector<TYPE, SIZE>::operator + (const Vector &v) {
     Vector result;
-    for (int i = 0; i < SIZE; ++i) {
-        result[i] = size[i] += v[i];
+    for (unsigned int i = 0; i < SIZE; ++i) {
+        result[i] = coor[i] += v[i];
     }
     return result;
 }
@@ -89,10 +88,11 @@ Vector Vector::operator + (const Vector &v) {
  |      Roznice dwoch skladnikow przekazanych jako wskaznik                   |
  |      na parametr.                                                          |
  */
-Vector Vector::operator - (const Vector &v) {
+template<typename TYPE, unsigned int SIZE>
+Vector<TYPE, SIZE> Vector<TYPE, SIZE>::operator - (const Vector &v) {
     Vector result;
-    for (int i = 0; i < SIZE; ++i) {
-        result[i] = size[i] -= v[i];
+    for (unsigned int i = 0; i < SIZE; ++i) {
+        result[i] = coor[i] -= v[i];
     }
     return result;
 }
@@ -108,10 +108,11 @@ Vector Vector::operator - (const Vector &v) {
  |      na parametr.                                                          |
  */
 
-Vector Vector::operator * (const double &tmp) {
+template<typename TYPE, unsigned int SIZE>
+Vector<TYPE, SIZE> Vector<TYPE, SIZE>::operator * (const TYPE &mul) {
     Vector result;
-    for (int i = 0; i < SIZE; ++i) {
-        result[i] = size[i] *= tmp;
+    for (unsigned int i = 0; i < SIZE; ++i) {
+        result[i] = coor[i] *= mul;
     }
     return result;
 }
@@ -127,11 +128,12 @@ Vector Vector::operator * (const double &tmp) {
  |      na parametr.                                                          |
  */
 
-Vector Vector::operator / (const double &tmp) {
+template<typename TYPE, unsigned int SIZE>
+Vector<TYPE, SIZE> Vector<TYPE, SIZE>::operator / (const TYPE &div) {
     Vector result;
 
-    for (int i = 0; i < SIZE; ++i) {
-        result[i] = size[i] / tmp;
+    for (unsigned int i = 0; i < SIZE; ++i) {
+        result[i] = coor[i] / div;
     }
 
     return result;
@@ -145,11 +147,12 @@ Vector Vector::operator / (const double &tmp) {
  |  Zwraca:                                                                   |
  |      Wartosc wektora w danym miejscu tablicy jako stala.                   |
  */
-const double &Vector::operator [] (int index) const {
+template<typename TYPE, unsigned int SIZE>
+const double &Vector<TYPE, SIZE>::operator [] (unsigned int index) const {
     if (index < 0 || index >= SIZE) {
         std::cerr << "Error: Wektor jest poza zasiegiem!" << std::endl;
     } // lepiej byłoby rzucić wyjątkiem stdexcept
-    return size[index];
+    return coor[index];
 }
 
 
@@ -160,7 +163,8 @@ const double &Vector::operator [] (int index) const {
  |  Zwraca:                                                                   |
  |      Wartosc wektora w danym miejscu tablicy.                              |
  */
-double &Vector::operator[](int index) {
+template<typename TYPE, unsigned int SIZE>
+double &Vector<TYPE, SIZE>::operator[](unsigned int index) {
     return const_cast<double &>(const_cast<const Vector *>(this)->operator[](index));
 }
 
@@ -171,8 +175,9 @@ double &Vector::operator[](int index) {
  |      out - strumien wejsciowy,                                             |
  |      tmp - wektor.                                                         |
  */
-std::ostream &operator << (std::ostream &out, Vector const &tmp) {
-    for (int i = 0; i < SIZE; ++i) {
+template<typename TYPE, unsigned int SIZE>
+std::ostream &operator << (std::ostream &out, Vector<TYPE, SIZE> const &tmp) {
+    for (unsigned int i = 0; i < SIZE; ++i) {
         out << "[ " << tmp[i] << " ]\n";
     }
     return out;
@@ -185,10 +190,32 @@ std::ostream &operator << (std::ostream &out, Vector const &tmp) {
  |      in - strumien wyjsciowy,                                              |
  |      tmp - wektor.                                                         |
  */
-std::istream &operator >> (std::istream &in, Vector &tmp) {
-    for (int i = 0; i < SIZE; ++i) {
+template<typename TYPE, unsigned int SIZE>
+std::istream &operator >> (std::istream &in, Vector<TYPE, SIZE> &tmp) {
+    for (unsigned int i = 0; i < SIZE; ++i) {
         in >> tmp[i];
     }
     std::cout << std::endl;
     return in;
+}
+
+template<typename TYPE, unsigned int SIZE>
+bool operator ==(const Vector<TYPE, SIZE> &v1, const Vector<TYPE, SIZE> &v2)
+{
+    for(unsigned int i = 0; i < SIZE; ++i) {
+        if(fabs(v1[i] - v2[i]) > epsilon)
+        {return false;}
+    }
+    return true;
+}
+
+
+template<typename TYPE, unsigned int SIZE>
+bool operator ==(const Vector<TYPE, SIZE> &v1, const double tmp[SIZE])
+{
+    for(unsigned int i = 0; i < SIZE; ++i) {
+        if(fabs(v1[i] - tmp[i]) > epsilon)
+        {return false;}
+    }
+    return true;
 }

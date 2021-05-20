@@ -1,0 +1,4 @@
+/home/mikubed/semestr2/zad4-Landsknecht3/build/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/rebuild_cache.dir
+/home/mikubed/semestr2/zad4-Landsknecht3/build/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/edit_cache.dir
+/home/mikubed/semestr2/zad4-Landsknecht3/build/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/boo.dir
+/home/mikubed/semestr2/zad4-Landsknecht3/build/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/foo.dir

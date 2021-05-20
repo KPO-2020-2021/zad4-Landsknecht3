@@ -118,6 +118,7 @@ int main() {
             << std::endl;
   // std::system("cat ../LICENSE");
   // do zadania Rotacja 2D
+  /*
   std::cout << "Vector:" << std::endl;
   Vector tmpV1 = Vector();
   std::cout << "Vector - konstruktor bezparametryczny:\n" << tmpV1 << std::endl;
@@ -131,6 +132,7 @@ int main() {
   double argumentsM[][SIZE] = {{1.0, 2.0},{3.0, 4.0}};
   Matrix tmpM2 = Matrix(argumentsM);
   std::cout << "Matrix - konstruktor parametryczny:\n" << tmpM2 << std::endl;
+  */
 
     PzG::LaczeDoGNUPlota  Lacze;  // Ta zmienna jest potrzebna do wizualizacji
                                 // rysunku prostokata
