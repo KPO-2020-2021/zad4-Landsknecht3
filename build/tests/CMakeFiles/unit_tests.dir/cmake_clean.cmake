@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "../unit_tests.pdb"
   "CMakeFiles/unit_tests.dir/dummy.cpp.o"
   "CMakeFiles/unit_tests.dir/main.cpp.o"
+  "CMakeFiles/unit_tests.dir/matrix.cpp.o"
 )
 
 # Per-language clean rules from dependency scanning.

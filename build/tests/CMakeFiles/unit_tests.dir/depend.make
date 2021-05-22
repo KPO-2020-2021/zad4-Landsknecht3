@@ -6,10 +6,21 @@ tests/CMakeFiles/unit_tests.dir/dummy.cpp.o: ../tests/doctest/doctest.h
 tests/CMakeFiles/unit_tests.dir/dummy.cpp.o: ../tests/dummy.cpp
 
 tests/CMakeFiles/unit_tests.dir/main.cpp.o: ../inc/example.h
+tests/CMakeFiles/unit_tests.dir/main.cpp.o: ../inc/matrix.hh
+tests/CMakeFiles/unit_tests.dir/main.cpp.o: ../inc/matrix2x2.hh
 tests/CMakeFiles/unit_tests.dir/main.cpp.o: ../inc/size.hh
 tests/CMakeFiles/unit_tests.dir/main.cpp.o: ../inc/vector.hh
 tests/CMakeFiles/unit_tests.dir/main.cpp.o: ../inc/vector2D.hh
 tests/CMakeFiles/unit_tests.dir/main.cpp.o: ../tests/doctest/doctest.h
 tests/CMakeFiles/unit_tests.dir/main.cpp.o: ../tests/dummy.cpp
 tests/CMakeFiles/unit_tests.dir/main.cpp.o: ../tests/main.cpp
+
+tests/CMakeFiles/unit_tests.dir/matrix.cpp.o: ../inc/example.h
+tests/CMakeFiles/unit_tests.dir/matrix.cpp.o: ../inc/matrix.hh
+tests/CMakeFiles/unit_tests.dir/matrix.cpp.o: ../inc/matrix2x2.hh
+tests/CMakeFiles/unit_tests.dir/matrix.cpp.o: ../inc/matrix3x3.hh
+tests/CMakeFiles/unit_tests.dir/matrix.cpp.o: ../inc/size.hh
+tests/CMakeFiles/unit_tests.dir/matrix.cpp.o: ../inc/vector.hh
+tests/CMakeFiles/unit_tests.dir/matrix.cpp.o: ../tests/doctest/doctest.h
+tests/CMakeFiles/unit_tests.dir/matrix.cpp.o: ../tests/matrix.cpp
 
