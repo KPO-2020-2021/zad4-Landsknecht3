@@ -40,6 +40,14 @@ iostream
 cmath
 -
 
+../inc/vector2D.hh
+vector.hh
+../inc/vector.hh
+
+../inc/vector3D.hh
+vector.hh
+../inc/vector.hh
+
 /home/mikubed/semestr2/zad4-Landsknecht3/tests/doctest/doctest.h
 signal.h
 -
@@ -133,4 +141,8 @@ matrix2x2.hh
 /home/mikubed/semestr2/zad4-Landsknecht3/tests/matrix2x2.hh
 matrix3x3.hh
 /home/mikubed/semestr2/zad4-Landsknecht3/tests/matrix3x3.hh
+vector2D.hh
+/home/mikubed/semestr2/zad4-Landsknecht3/tests/vector2D.hh
+vector3D.hh
+/home/mikubed/semestr2/zad4-Landsknecht3/tests/vector3D.hh
 

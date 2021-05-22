@@ -6,11 +6,11 @@
 #include <cstdlib>
 #include <cmath>
 
-template<typename TYPE, unsigned int SIZE>
+template< unsigned int SIZE>
 class Matrix {
 
 private:
-    TYPE value[SIZE][SIZE];               // Wartosci macierzy
+    double value[SIZE][SIZE];               // Wartosci macierzy
 
 public:
     Matrix(double [SIZE][SIZE]);            // Konstruktor klasy
@@ -21,7 +21,7 @@ public:
 
     Matrix(char axis, double degr);
 
-    Vector<TYPE,SIZE> operator * (Vector<TYPE,SIZE> tmp);           // Operator mnożenia przez wektor
+    Vector<SIZE> operator * (Vector<SIZE> tmp);           // Operator mnożenia przez wektor
 
     Matrix operator + (Matrix tmp);
 
@@ -41,8 +41,8 @@ public:
  |  Zwraca:                                                                   |
  |      Macierz wypelnione wartoscia 0.                                       |
  */
-template<typename TYPE, unsigned int SIZE>
-Matrix<TYPE, SIZE>::Matrix() {
+template< unsigned int SIZE>
+Matrix< SIZE>::Matrix() {
     for (unsigned int i = 0; i < SIZE; ++i) {
         for (unsigned int j = 0; j < SIZE; ++j) {
             value[i][j] = 0;
@@ -58,8 +58,8 @@ Matrix<TYPE, SIZE>::Matrix() {
  |  Zwraca:                                                                   |
  |      Macierz wypelniona wartosciami podanymi w argumencie.                 |
  */
-template<typename TYPE, unsigned int SIZE>
-Matrix<TYPE, SIZE>::Matrix(double tmp[SIZE][SIZE]) {
+template< unsigned int SIZE>
+Matrix< SIZE>::Matrix(double tmp[SIZE][SIZE]) {
     for (unsigned int i = 0; i < SIZE; ++i) {
         for (unsigned int j = 0; j < SIZE; ++j) {
             value[i][j] = tmp[i][j];
@@ -68,8 +68,8 @@ Matrix<TYPE, SIZE>::Matrix(double tmp[SIZE][SIZE]) {
 }
 
 
-template<typename TYPE, unsigned int SIZE>
-Matrix<TYPE, SIZE>::Matrix(double degr)
+template< unsigned int SIZE>
+Matrix< SIZE>::Matrix(double degr)
 {   
     if(SIZE != 2)
     { std::cerr << "Uzyto nielasciwego konstruktora macierzy obrotu. Wymiary macierzy nie odpowiadaja temu konstruktorowi"; exit(0);}
@@ -78,29 +78,30 @@ Matrix<TYPE, SIZE>::Matrix(double degr)
 }
 
 
-template<typename TYPE, unsigned int SIZE>
-Matrix<TYPE, SIZE>::Matrix(char axis, double degr)
+template< unsigned int SIZE>
+Matrix< SIZE>::Matrix(char axis, double degr)
 {   
     if(SIZE != 3)
     {std::cerr << "Uzyto nielasciwego konstruktora macierzy obrotu. Wymiary macierzy nie odpowiadaja temu konstruktorowi"; exit(0);}
     switch (axis)
     {
     case 'x':
-        value[0][0] = 1; value[0][0] = 0;             value[0][2] = 0;
+        value[0][0] = 1; value[0][1] = 0;             value[0][2] = 0;
         value[1][0] = 0; value[1][1] = cos(degr*PID); value[1][2] = -sin(degr*PID);
         value[2][0] = 0; value[2][1] = sin(degr*PID); value[2][2] = cos(degr*PID);
         break;
     case 'y':
-        value[0][0] = cos(degr*PID);  value[0][0] = 0;  value[0][2] = sin(degr*PID);
+        value[0][0] = cos(degr*PID);  value[0][1] = 0;  value[0][2] = sin(degr*PID);
         value[1][0] = 0;              value[1][1] = 1;  value[1][2] = 0;
         value[2][0] = -sin(degr*PID); value[2][1] = 0;  value[2][2] = cos(degr*PID);
         break;
     case 'z':
-        value[0][0] = cos(degr*PID); value[0][0] = -sin(degr*PID); value[0][2] = 0;
+        value[0][0] = cos(degr*PID); value[0][1] = -sin(degr*PID); value[0][2] = 0;
         value[1][0] = sin(degr*PID); value[1][1] = cos(degr*PID);  value[1][2] = 0;
         value[2][0] = 0;             value[2][1] = 0;              value[2][2] = 1;
         break;
     default:
+    std::cerr << "Podano niepoprawny znak"; exit(0);
         break;
     }
 }
@@ -114,9 +115,9 @@ Matrix<TYPE, SIZE>::Matrix(char axis, double degr)
  |  Zwraca:                                                                   |
  |      Iloczyn dwoch skladnikow przekazanych jako wektor.                    |
  */
-template<typename TYPE, unsigned int SIZE>
-Vector<TYPE,SIZE> Matrix<TYPE, SIZE>::operator * (Vector<TYPE, SIZE> tmp) {
-    Vector<TYPE, SIZE> result;
+template< unsigned int SIZE>
+Vector<SIZE> Matrix< SIZE>::operator * (Vector< SIZE> tmp) {
+    Vector<SIZE> result;
     for (unsigned int i = 0; i < SIZE; ++i) {
         for (unsigned int j = 0; j < SIZE; ++j) {
             result[i] += value[i][j] * tmp[j];
@@ -134,8 +135,8 @@ Vector<TYPE,SIZE> Matrix<TYPE, SIZE>::operator * (Vector<TYPE, SIZE> tmp) {
  |  Zwraca:                                                                   |
  |      Wartosc macierzy w danym miejscu tablicy.                             |
  */
-template<typename TYPE, unsigned int SIZE>
-double &Matrix<TYPE,SIZE>::operator()(unsigned int row, unsigned int column) {
+template< unsigned int SIZE>
+double &Matrix<SIZE>::operator()(unsigned int row, unsigned int column) {
 
     if (row >= SIZE) {
         std::cout << "Error: Macierz jest poza zasiegiem"; 
@@ -159,8 +160,8 @@ double &Matrix<TYPE,SIZE>::operator()(unsigned int row, unsigned int column) {
  |  Zwraca:                                                                   |
  |      Wartosc macierzy w danym miejscu tablicy jako stala.                  |
  */
-template<typename TYPE, unsigned int SIZE>
-const double &Matrix<TYPE,SIZE>::operator () (unsigned int row, unsigned int column) const {
+template< unsigned int SIZE>
+const double &Matrix<SIZE>::operator () (unsigned int row, unsigned int column) const {
 
     if (row >= SIZE) {
         std::cout << "Error: Macierz jest poza zasiegiem";
@@ -183,8 +184,8 @@ const double &Matrix<TYPE,SIZE>::operator () (unsigned int row, unsigned int col
  |  Zwraca:                                                                   |
  |      Macierz - iloczyn dwóch podanych macierzy.                  |
  */
-template<typename TYPE, unsigned int SIZE>
-Matrix<TYPE,SIZE> Matrix<TYPE, SIZE>::operator + (Matrix tmp) {
+template< unsigned int SIZE>
+Matrix<SIZE> Matrix< SIZE>::operator + (Matrix tmp) {
     Matrix result;
     for (unsigned int i = 0; i < SIZE; ++i) {
         for (unsigned int j = 0; j < SIZE; ++j) {
@@ -194,8 +195,8 @@ Matrix<TYPE,SIZE> Matrix<TYPE, SIZE>::operator + (Matrix tmp) {
     return result;
 }
 
-template<typename TYPE, unsigned int SIZE>
-Matrix<TYPE, SIZE> Matrix<TYPE, SIZE>::operator *(Matrix tmp)
+template< unsigned int SIZE>
+Matrix< SIZE> Matrix< SIZE>::operator *(Matrix tmp)
 {  
     Matrix result;
     for(unsigned int i = 0; i < SIZE; ++i){
@@ -214,8 +215,8 @@ Matrix<TYPE, SIZE> Matrix<TYPE, SIZE>::operator *(Matrix tmp)
  |      in - strumien wyjsciowy,                                              |
  |      mat - macierz.                                                         |
  */
-template<typename TYPE, unsigned int SIZE>
-std::istream &operator>>(std::istream &in, Matrix<TYPE,SIZE> &mat) {
+template< unsigned int SIZE>
+std::istream &operator>>(std::istream &in, Matrix<SIZE> &mat) {
     for (unsigned int i = 0; i < SIZE; ++i) {
         for (unsigned int j = 0; j < SIZE; ++j) {
             in >> mat(i, j);
@@ -231,8 +232,8 @@ std::istream &operator>>(std::istream &in, Matrix<TYPE,SIZE> &mat) {
  |      out - strumien wejsciowy,                                             |
  |      mat - macierz.                                                        |
  */
-template<typename TYPE, unsigned int SIZE>
-std::ostream &operator<<(std::ostream &out, const Matrix<TYPE,SIZE> &mat) {
+template< unsigned int SIZE>
+std::ostream &operator<<(std::ostream &out, const Matrix<SIZE> &mat) {
     for (unsigned int i = 0; i < SIZE; ++i) {
         for (unsigned int j = 0; j < SIZE; ++j) {
             out << "| " << mat(i, j) << " | "; //warto ustalic szerokosc wyswietlania dokladnosci liczb
@@ -243,8 +244,8 @@ std::ostream &operator<<(std::ostream &out, const Matrix<TYPE,SIZE> &mat) {
 }
 
 
-template<typename TYPE, unsigned int SIZE>
-bool operator ==(const Matrix<TYPE, SIZE> &m1, const Matrix<TYPE, SIZE> &m2)
+template< unsigned int SIZE>
+bool operator ==(const Matrix< SIZE> &m1, const Matrix< SIZE> &m2)
 {   
     for(unsigned int i = 0; i < SIZE; i++)
     {
@@ -256,3 +257,17 @@ bool operator ==(const Matrix<TYPE, SIZE> &m1, const Matrix<TYPE, SIZE> &m2)
     return true;
 }
 
+
+
+template< unsigned int SIZE>
+bool operator ==(const Matrix< SIZE> &m1, const double m2[SIZE][SIZE])
+{
+    for(unsigned int i = 0; i < SIZE; i++)
+    {
+        for(unsigned int j = 0; j < SIZE; j++)
+        {
+            if(m1(i, j) - m2[i][j] > epsilon){return false;}
+        }
+    }
+    return true;
+}

@@ -21,6 +21,8 @@ tests/CMakeFiles/unit_tests.dir/matrix.cpp.o: ../inc/matrix2x2.hh
 tests/CMakeFiles/unit_tests.dir/matrix.cpp.o: ../inc/matrix3x3.hh
 tests/CMakeFiles/unit_tests.dir/matrix.cpp.o: ../inc/size.hh
 tests/CMakeFiles/unit_tests.dir/matrix.cpp.o: ../inc/vector.hh
+tests/CMakeFiles/unit_tests.dir/matrix.cpp.o: ../inc/vector2D.hh
+tests/CMakeFiles/unit_tests.dir/matrix.cpp.o: ../inc/vector3D.hh
 tests/CMakeFiles/unit_tests.dir/matrix.cpp.o: ../tests/doctest/doctest.h
 tests/CMakeFiles/unit_tests.dir/matrix.cpp.o: ../tests/matrix.cpp
 

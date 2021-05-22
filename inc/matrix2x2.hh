@@ -3,6 +3,6 @@
 
 #include "matrix.hh"
 
-typedef Matrix<double, 2> Matrix2x2;
+typedef Matrix<2> Matrix2x2;
 
 #endif

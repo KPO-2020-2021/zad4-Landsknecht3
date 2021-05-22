@@ -4,11 +4,11 @@
 #include <iostream>
 #include <cmath>
 
-template <typename TYPE, unsigned int SIZE>
+template < unsigned int SIZE>
 class Vector
 {
 private:
-    TYPE coor[SIZE];
+    double coor[SIZE];
 public:
     Vector();
 
@@ -18,9 +18,9 @@ public:
 
     Vector operator -(const Vector &v);
 
-    Vector operator *(const TYPE &mul);
+    Vector operator *(const double &mul);
 
-    Vector operator /(const TYPE &div);
+    Vector operator /(const double &div);
 
     const double &operator [] (unsigned int index) const;
 
@@ -36,8 +36,8 @@ public:
  |  Zwraca:                                                                   |
  |      Tablice wypelniona wartoscia 0.                                       |
  */
-template<typename TYPE, unsigned int SIZE>
-Vector<TYPE, SIZE>::Vector() {
+template<unsigned int SIZE>
+Vector<SIZE>::Vector() {
     for (unsigned int i = 0; i < SIZE; ++i) {
         coor[i] = 0;
     }
@@ -52,8 +52,8 @@ Vector<TYPE, SIZE>::Vector() {
  |      Tablice wypelniona wartosciami podanymi w argumencie.                 |
  */
 
-template<typename TYPE, unsigned int SIZE>
-Vector<TYPE, SIZE>::Vector(double tmp[SIZE]) {
+template< unsigned int SIZE>
+Vector< SIZE>::Vector(double tmp[SIZE]) {
     for (unsigned int i = 0; i < SIZE; ++i) {
         coor[i] = tmp[i];
     }
@@ -69,8 +69,8 @@ Vector<TYPE, SIZE>::Vector(double tmp[SIZE]) {
  |      Sume dwoch skladnikow przekazanych jako wskaznik                      |
  |      na parametr.                                                          |
  */
-template<typename TYPE, unsigned int SIZE>
-Vector<TYPE, SIZE> Vector<TYPE, SIZE>::operator + (const Vector &v) {
+template< unsigned int SIZE>
+Vector< SIZE> Vector< SIZE>::operator + (const Vector &v) {
     Vector result;
     for (unsigned int i = 0; i < SIZE; ++i) {
         result[i] = coor[i] += v[i];
@@ -88,8 +88,8 @@ Vector<TYPE, SIZE> Vector<TYPE, SIZE>::operator + (const Vector &v) {
  |      Roznice dwoch skladnikow przekazanych jako wskaznik                   |
  |      na parametr.                                                          |
  */
-template<typename TYPE, unsigned int SIZE>
-Vector<TYPE, SIZE> Vector<TYPE, SIZE>::operator - (const Vector &v) {
+template< unsigned int SIZE>
+Vector< SIZE> Vector< SIZE>::operator - (const Vector &v) {
     Vector result;
     for (unsigned int i = 0; i < SIZE; ++i) {
         result[i] = coor[i] -= v[i];
@@ -108,8 +108,8 @@ Vector<TYPE, SIZE> Vector<TYPE, SIZE>::operator - (const Vector &v) {
  |      na parametr.                                                          |
  */
 
-template<typename TYPE, unsigned int SIZE>
-Vector<TYPE, SIZE> Vector<TYPE, SIZE>::operator * (const TYPE &mul) {
+template< unsigned int SIZE>
+Vector< SIZE> Vector< SIZE>::operator * (const double &mul) {
     Vector result;
     for (unsigned int i = 0; i < SIZE; ++i) {
         result[i] = coor[i] *= mul;
@@ -128,8 +128,8 @@ Vector<TYPE, SIZE> Vector<TYPE, SIZE>::operator * (const TYPE &mul) {
  |      na parametr.                                                          |
  */
 
-template<typename TYPE, unsigned int SIZE>
-Vector<TYPE, SIZE> Vector<TYPE, SIZE>::operator / (const TYPE &div) {
+template< unsigned int SIZE>
+Vector< SIZE> Vector< SIZE>::operator / (const double &div) {
     Vector result;
 
     for (unsigned int i = 0; i < SIZE; ++i) {
@@ -147,8 +147,8 @@ Vector<TYPE, SIZE> Vector<TYPE, SIZE>::operator / (const TYPE &div) {
  |  Zwraca:                                                                   |
  |      Wartosc wektora w danym miejscu tablicy jako stala.                   |
  */
-template<typename TYPE, unsigned int SIZE>
-const double &Vector<TYPE, SIZE>::operator [] (unsigned int index) const {
+template< unsigned int SIZE>
+const double &Vector< SIZE>::operator [] (unsigned int index) const {
     if (index < 0 || index >= SIZE) {
         std::cerr << "Error: Wektor jest poza zasiegiem!" << std::endl;
     } // lepiej byłoby rzucić wyjątkiem stdexcept
@@ -163,8 +163,8 @@ const double &Vector<TYPE, SIZE>::operator [] (unsigned int index) const {
  |  Zwraca:                                                                   |
  |      Wartosc wektora w danym miejscu tablicy.                              |
  */
-template<typename TYPE, unsigned int SIZE>
-double &Vector<TYPE, SIZE>::operator[](unsigned int index) {
+template< unsigned int SIZE>
+double &Vector< SIZE>::operator[](unsigned int index) {
     return const_cast<double &>(const_cast<const Vector *>(this)->operator[](index));
 }
 
@@ -175,8 +175,8 @@ double &Vector<TYPE, SIZE>::operator[](unsigned int index) {
  |      out - strumien wejsciowy,                                             |
  |      tmp - wektor.                                                         |
  */
-template<typename TYPE, unsigned int SIZE>
-std::ostream &operator << (std::ostream &out, Vector<TYPE, SIZE> const &tmp) {
+template< unsigned int SIZE>
+std::ostream &operator << (std::ostream &out, Vector< SIZE> const &tmp) {
     for (unsigned int i = 0; i < SIZE; ++i) {
         out << "[ " << tmp[i] << " ]\n";
     }
@@ -190,8 +190,8 @@ std::ostream &operator << (std::ostream &out, Vector<TYPE, SIZE> const &tmp) {
  |      in - strumien wyjsciowy,                                              |
  |      tmp - wektor.                                                         |
  */
-template<typename TYPE, unsigned int SIZE>
-std::istream &operator >> (std::istream &in, Vector<TYPE, SIZE> &tmp) {
+template< unsigned int SIZE>
+std::istream &operator >> (std::istream &in, Vector< SIZE> &tmp) {
     for (unsigned int i = 0; i < SIZE; ++i) {
         in >> tmp[i];
     }
@@ -199,8 +199,8 @@ std::istream &operator >> (std::istream &in, Vector<TYPE, SIZE> &tmp) {
     return in;
 }
 
-template<typename TYPE, unsigned int SIZE>
-bool operator ==(const Vector<TYPE, SIZE> &v1, const Vector<TYPE, SIZE> &v2)
+template< unsigned int SIZE>
+bool operator ==(const Vector< SIZE> &v1, const Vector< SIZE> &v2)
 {
     for(unsigned int i = 0; i < SIZE; ++i) {
         if(fabs(v1[i] - v2[i]) > epsilon)
@@ -210,8 +210,8 @@ bool operator ==(const Vector<TYPE, SIZE> &v1, const Vector<TYPE, SIZE> &v2)
 }
 
 
-template<typename TYPE, unsigned int SIZE>
-bool operator ==(const Vector<TYPE, SIZE> &v1, const double tmp[SIZE])
+template< unsigned int SIZE>
+bool operator ==(const Vector< SIZE> &v1, const double tmp[SIZE])
 {
     for(unsigned int i = 0; i < SIZE; ++i) {
         if(fabs(v1[i] - tmp[i]) > epsilon)

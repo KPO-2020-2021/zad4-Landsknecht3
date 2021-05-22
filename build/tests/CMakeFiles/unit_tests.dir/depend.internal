@@ -22,5 +22,7 @@ tests/CMakeFiles/unit_tests.dir/matrix.cpp.o
  ../inc/matrix3x3.hh
  ../inc/size.hh
  ../inc/vector.hh
+ ../inc/vector2D.hh
+ ../inc/vector3D.hh
  /home/mikubed/semestr2/zad4-Landsknecht3/tests/doctest/doctest.h
  /home/mikubed/semestr2/zad4-Landsknecht3/tests/matrix.cpp
