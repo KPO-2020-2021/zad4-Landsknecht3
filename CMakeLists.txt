@@ -45,6 +45,7 @@ set(TESTFILES        # All .cpp files in tests/
     tests/main.cpp
     tests/dummy.cpp
     matrix.cpp
+    cuboid.cpp
 )
 set(LIBRARY_NAME program)  # Default name for the library built from src/*.cpp (change if you wish)
 

@@ -166,6 +166,33 @@ unit_tests/fast:
 	cd /home/mikubed/semestr2/zad4-Landsknecht3/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/build
 .PHONY : unit_tests/fast
 
+cuboid.o: cuboid.cpp.o
+
+.PHONY : cuboid.o
+
+# target to build an object file
+cuboid.cpp.o:
+	cd /home/mikubed/semestr2/zad4-Landsknecht3/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/cuboid.cpp.o
+.PHONY : cuboid.cpp.o
+
+cuboid.i: cuboid.cpp.i
+
+.PHONY : cuboid.i
+
+# target to preprocess a source file
+cuboid.cpp.i:
+	cd /home/mikubed/semestr2/zad4-Landsknecht3/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/cuboid.cpp.i
+.PHONY : cuboid.cpp.i
+
+cuboid.s: cuboid.cpp.s
+
+.PHONY : cuboid.s
+
+# target to generate assembly for a file
+cuboid.cpp.s:
+	cd /home/mikubed/semestr2/zad4-Landsknecht3/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/cuboid.cpp.s
+.PHONY : cuboid.cpp.s
+
 dummy.o: dummy.cpp.o
 
 .PHONY : dummy.o
@@ -259,6 +286,9 @@ help:
 	@echo "... fulltest"
 	@echo "... coverage"
 	@echo "... unit_tests"
+	@echo "... cuboid.o"
+	@echo "... cuboid.i"
+	@echo "... cuboid.s"
 	@echo "... dummy.o"
 	@echo "... dummy.i"
 	@echo "... dummy.s"

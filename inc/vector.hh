@@ -22,6 +22,8 @@ public:
 
     Vector operator /(const double &div);
 
+    double length(const Vector &v);
+
     const double &operator [] (unsigned int index) const;
 
     double &operator [] (unsigned int index);
@@ -218,4 +220,20 @@ bool operator ==(const Vector< SIZE> &v1, const double tmp[SIZE])
         {return false;}
     }
     return true;
+}
+
+template<unsigned int SIZE>
+double Vector<SIZE>::length(const Vector &v)
+{   
+    double result = 0;
+    Vector<SIZE> v3;
+    for(unsigned int i = 0; i < SIZE; ++i)
+    {
+        v3.coor[i] = std::abs(coor[i] - v.coor[i]);
+    }
+    for(unsigned int i = 0; i < SIZE; ++i)
+    {
+        result += (v3.coor[i] * v3.coor[i]);
+    }
+    return std::sqrt(result);
 }
