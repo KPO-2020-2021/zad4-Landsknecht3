@@ -45,6 +45,8 @@ size.hh
 ../inc/size.hh
 iostream
 -
+iomanip
+-
 cmath
 -
 

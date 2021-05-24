@@ -17,11 +17,10 @@ tests/CMakeFiles/unit_tests.dir/dummy.cpp.o
  /home/mikubed/semestr2/zad4-Landsknecht3/tests/dummy.cpp
 tests/CMakeFiles/unit_tests.dir/main.cpp.o
  ../inc/example.h
- ../inc/matrix.hh
- ../inc/matrix2x2.hh
  ../inc/size.hh
  ../inc/vector.hh
  ../inc/vector2D.hh
+ ../inc/vector3D.hh
  /home/mikubed/semestr2/zad4-Landsknecht3/tests/doctest/doctest.h
  /home/mikubed/semestr2/zad4-Landsknecht3/tests/dummy.cpp
  /home/mikubed/semestr2/zad4-Landsknecht3/tests/main.cpp

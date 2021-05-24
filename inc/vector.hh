@@ -2,6 +2,7 @@
 
 #include "size.hh"
 #include <iostream>
+#include <iomanip>
 #include <cmath>
 
 template < unsigned int SIZE>
@@ -180,7 +181,7 @@ double &Vector< SIZE>::operator[](unsigned int index) {
 template< unsigned int SIZE>
 std::ostream &operator << (std::ostream &out, Vector< SIZE> const &tmp) {
     for (unsigned int i = 0; i < SIZE; ++i) {
-        out << "[ " << tmp[i] << " ]\n";
+        out << "[ " << std::fixed << std::setprecision(10) << tmp[i] << " ]\n";
     }
     return out;
 }

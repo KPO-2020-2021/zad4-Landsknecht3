@@ -172,3 +172,12 @@ bool operator ==(const Cuboid &c1, const Cuboid &c2)
     }
     return true;
 }
+bool operator ==(const Cuboid &c1, const Vector3D array[8])
+{
+    for(unsigned int i =0; i < APICES; ++i)
+    {
+        if(c1[i] == array[i]){}
+        else{return false;}
+    }
+    return true;
+}

@@ -207,7 +207,7 @@ Matrix< SIZE> Matrix< SIZE>::operator *(Matrix tmp)
             }
         }
     }
-
+    return result;
 }
 
 /******************************************************************************
