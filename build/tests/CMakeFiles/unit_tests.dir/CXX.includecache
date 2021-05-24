@@ -27,10 +27,16 @@ vector.hh
 ../inc/vector.hh
 iostream
 -
+iomanip
+-
 cstdlib
 -
 cmath
 -
+
+../inc/matrix2x2.hh
+matrix.hh
+../inc/matrix.hh
 
 ../inc/matrix3x3.hh
 matrix.hh
@@ -45,6 +51,10 @@ iostream
 -
 cmath
 -
+
+../inc/vector2D.hh
+vector.hh
+../inc/vector.hh
 
 ../inc/vector3D.hh
 vector.hh
@@ -141,4 +151,34 @@ sys/time.h
 -
 unistd.h
 -
+
+/home/mikubed/semestr2/zad4-Landsknecht3/tests/dummy.cpp
+../tests/doctest/doctest.h
+/home/mikubed/semestr2/zad4-Landsknecht3/tests/doctest/doctest.h
+example.h
+/home/mikubed/semestr2/zad4-Landsknecht3/tests/example.h
+
+/home/mikubed/semestr2/zad4-Landsknecht3/tests/main.cpp
+../tests/doctest/doctest.h
+/home/mikubed/semestr2/zad4-Landsknecht3/tests/doctest/doctest.h
+dummy.cpp
+/home/mikubed/semestr2/zad4-Landsknecht3/tests/dummy.cpp
+vector2D.hh
+/home/mikubed/semestr2/zad4-Landsknecht3/tests/vector2D.hh
+matrix2x2.hh
+/home/mikubed/semestr2/zad4-Landsknecht3/tests/matrix2x2.hh
+
+/home/mikubed/semestr2/zad4-Landsknecht3/tests/matrix.cpp
+../tests/doctest/doctest.h
+/home/mikubed/semestr2/zad4-Landsknecht3/tests/doctest/doctest.h
+example.h
+/home/mikubed/semestr2/zad4-Landsknecht3/tests/example.h
+matrix2x2.hh
+/home/mikubed/semestr2/zad4-Landsknecht3/tests/matrix2x2.hh
+matrix3x3.hh
+/home/mikubed/semestr2/zad4-Landsknecht3/tests/matrix3x3.hh
+vector2D.hh
+/home/mikubed/semestr2/zad4-Landsknecht3/tests/vector2D.hh
+vector3D.hh
+/home/mikubed/semestr2/zad4-Landsknecht3/tests/vector3D.hh
 

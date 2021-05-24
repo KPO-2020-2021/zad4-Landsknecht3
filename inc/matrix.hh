@@ -3,6 +3,7 @@
 #include "size.hh"
 #include "vector.hh"
 #include <iostream>
+#include <iomanip>
 #include <cstdlib>
 #include <cmath>
 
@@ -236,7 +237,7 @@ template< unsigned int SIZE>
 std::ostream &operator<<(std::ostream &out, const Matrix<SIZE> &mat) {
     for (unsigned int i = 0; i < SIZE; ++i) {
         for (unsigned int j = 0; j < SIZE; ++j) {
-            out << "| " << mat(i, j) << " | "; //warto ustalic szerokosc wyswietlania dokladnosci liczb
+            out << "| " << std::fixed << std::setprecision(10) << mat(i, j) << " | "; //warto ustalic szerokosc wyswietlania dokladnosci liczb
         }
         std::cout << std::endl;
     }

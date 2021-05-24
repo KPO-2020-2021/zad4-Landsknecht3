@@ -14,7 +14,7 @@ class Cuboid
     public:
         Cuboid();
         Cuboid(Vector3D v[APICES]);
-        Cuboid rotation(char axis, double degr);
+        Cuboid rotation(const Matrix3x3 m);
         Cuboid translation(Vector3D v);
         const Vector3D &operator[](unsigned int index) const;
         void sides();
@@ -40,10 +40,10 @@ Cuboid::Cuboid(Vector3D v[APICES])
     }
 }
 
-Cuboid Cuboid::rotation(char axis, double degr)
+Cuboid Cuboid::rotation(Matrix3x3 m)
 {   
     Cuboid result;
-    Matrix3x3 m(axis, degr);
+    
     for(unsigned int i = 0; i < APICES; ++i)
     {
         result.cub[i] = m * cub[i]; 

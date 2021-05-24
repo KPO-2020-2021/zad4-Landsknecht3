@@ -14,6 +14,8 @@ TEST_CASE("KONSTRUKTOR BEZPARAMETRYCZNY")
   arr[0] = v1; arr[1] = v2; arr[2] = v3; arr[3] = v4; arr[4] = v5;
   arr[5] = v6; arr[6] = v7; arr[7] = v8;
   Cuboid c(arr);
-  c.sides();
+  Matrix3x3 m('x', 45);
+  c = c.rotation(m);
+  std::cout << c;
 
 }

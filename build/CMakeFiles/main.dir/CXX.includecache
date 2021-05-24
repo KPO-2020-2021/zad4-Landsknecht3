@@ -6,6 +6,16 @@
 
 #IncludeRegexTransform: 
 
+../inc/cuboid.hh
+iomanip
+-
+size.hh
+../inc/size.hh
+matrix3x3.hh
+../inc/matrix3x3.hh
+vector3D.hh
+../inc/vector3D.hh
+
 ../inc/example.h
 ../tests/doctest/doctest.h
 ../tests/doctest/doctest.h
@@ -17,10 +27,16 @@ vector.hh
 ../inc/vector.hh
 iostream
 -
+iomanip
+-
 cstdlib
 -
 cmath
 -
+
+../inc/matrix3x3.hh
+matrix.hh
+../inc/matrix.hh
 
 ../inc/size.hh
 
@@ -31,6 +47,10 @@ iostream
 -
 cmath
 -
+
+../inc/vector3D.hh
+vector.hh
+../inc/vector.hh
 
 /home/mikubed/semestr2/zad4-Landsknecht3/app/main.cpp
 ../tests/doctest/doctest.h
@@ -49,10 +69,12 @@ exampleConfig.h
 /home/mikubed/semestr2/zad4-Landsknecht3/app/exampleConfig.h
 example.h
 /home/mikubed/semestr2/zad4-Landsknecht3/app/example.h
-vector.hh
-/home/mikubed/semestr2/zad4-Landsknecht3/app/vector.hh
-matrix.hh
-/home/mikubed/semestr2/zad4-Landsknecht3/app/matrix.hh
+vector3D.hh
+/home/mikubed/semestr2/zad4-Landsknecht3/app/vector3D.hh
+matrix3x3.hh
+/home/mikubed/semestr2/zad4-Landsknecht3/app/matrix3x3.hh
+cuboid.hh
+/home/mikubed/semestr2/zad4-Landsknecht3/app/cuboid.hh
 ../inc/lacze_do_gnuplota.hh
 /home/mikubed/semestr2/zad4-Landsknecht3/inc/lacze_do_gnuplota.hh
 
