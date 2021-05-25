@@ -1,0 +1,108 @@
+\hypertarget{matrix_8hh}{}\doxysection{Dokumentacja pliku matrix.\+hh}
+\label{matrix_8hh}\index{matrix.hh@{matrix.hh}}
+
+
+Szablon klasy matrix Plik zawiera odpowiednie metody szablonu klasy matrix.  
+
+
+{\ttfamily \#include \char`\"{}size.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}vector.\+hh\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+Wykres zależności załączania dla matrix.\+hh\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{matrix_8hh__incl}
+\end{center}
+\end{figure}
+Ten wykres pokazuje, które pliki bezpośrednio lub pośrednio załączają ten plik\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{matrix_8hh__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_matrix}{Matrix$<$ S\+I\+Z\+E $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$unsigned int S\+I\+ZE$>$ }\\std\+::istream \& \mbox{\hyperlink{matrix_8hh_ab7ceb3fedb15297a6231812023e03de9}{operator$>$$>$}} (std\+::istream \&in, \mbox{\hyperlink{class_matrix}{Matrix}}$<$ S\+I\+ZE $>$ \&mat)
+\begin{DoxyCompactList}\small\item\em Przeciazenie operatora $>$$>$ \end{DoxyCompactList}\item 
+{\footnotesize template$<$unsigned int S\+I\+ZE$>$ }\\\mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}} \& \mbox{\hyperlink{matrix_8hh_a850b23361eb4d61cde987a576b288dca}{operator$<$$<$}} (\mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}} \&out, const \mbox{\hyperlink{class_matrix}{Matrix}}$<$ S\+I\+ZE $>$ \&mat)
+\begin{DoxyCompactList}\small\item\em Przeciazenie operatora $<$$<$. \end{DoxyCompactList}\item 
+{\footnotesize template$<$unsigned int S\+I\+ZE$>$ }\\bool \mbox{\hyperlink{matrix_8hh_a3c8602021e92e6cde82b1e97a1c22ce7}{operator==}} (const \mbox{\hyperlink{class_matrix}{Matrix}}$<$ S\+I\+ZE $>$ \&m1, const \mbox{\hyperlink{class_matrix}{Matrix}}$<$ S\+I\+ZE $>$ \&m2)
+\begin{DoxyCompactList}\small\item\em przeciazenie operatora == \end{DoxyCompactList}\item 
+{\footnotesize template$<$unsigned int S\+I\+ZE$>$ }\\bool \mbox{\hyperlink{matrix_8hh_ad8100f0cc23d5b73bdbae5d6a328dc2f}{operator==}} (const \mbox{\hyperlink{class_matrix}{Matrix}}$<$ S\+I\+ZE $>$ \&m1, const double m2\mbox{[}S\+I\+ZE\mbox{]}\mbox{[}S\+I\+ZE\mbox{]})
+\begin{DoxyCompactList}\small\item\em przeciazenie operatora == \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja funkcji}
+\mbox{\Hypertarget{matrix_8hh_a850b23361eb4d61cde987a576b288dca}\label{matrix_8hh_a850b23361eb4d61cde987a576b288dca}} 
+\index{matrix.hh@{matrix.hh}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!matrix.hh@{matrix.hh}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily template$<$unsigned int S\+I\+ZE$>$ \\
+\mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}}\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}} \&}]{out,  }\item[{const \mbox{\hyperlink{class_matrix}{Matrix}}$<$ S\+I\+ZE $>$ \&}]{mat }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parametry}
+{\em out} & Strumien wejsciowy \\
+\hline
+{\em mat} & macierz \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{matrix_8hh_ad8100f0cc23d5b73bdbae5d6a328dc2f}\label{matrix_8hh_ad8100f0cc23d5b73bdbae5d6a328dc2f}} 
+\index{matrix.hh@{matrix.hh}!operator==@{operator==}}
+\index{operator==@{operator==}!matrix.hh@{matrix.hh}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int S\+I\+ZE$>$ \\
+bool operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_matrix}{Matrix}}$<$ S\+I\+ZE $>$ \&}]{m1,  }\item[{const double}]{m2\mbox{[}\+S\+I\+Z\+E\mbox{]}\mbox{[}\+S\+I\+Z\+E\mbox{]} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parametry}
+{\em m1} & pierwszy skladnik (macierz) \\
+\hline
+{\em m2} & drugi skladnik (dwuwymiarowa tablica z elementami typu double) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+wartosc typu bool przekazujaca czy macierz i tablica posiadaja takie same elementy 
+\end{DoxyReturn}
+\mbox{\Hypertarget{matrix_8hh_a3c8602021e92e6cde82b1e97a1c22ce7}\label{matrix_8hh_a3c8602021e92e6cde82b1e97a1c22ce7}} 
+\index{matrix.hh@{matrix.hh}!operator==@{operator==}}
+\index{operator==@{operator==}!matrix.hh@{matrix.hh}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int S\+I\+ZE$>$ \\
+bool operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_matrix}{Matrix}}$<$ S\+I\+ZE $>$ \&}]{m1,  }\item[{const \mbox{\hyperlink{class_matrix}{Matrix}}$<$ S\+I\+ZE $>$ \&}]{m2 }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parametry}
+{\em m1} & pierwszy skladnik (macierz) \\
+\hline
+{\em m2} & drugi skladnik (macierz) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+wartosc typu bool przekazujaca czy macierze posiadaja takie same elementy 
+\end{DoxyReturn}
+\mbox{\Hypertarget{matrix_8hh_ab7ceb3fedb15297a6231812023e03de9}\label{matrix_8hh_ab7ceb3fedb15297a6231812023e03de9}} 
+\index{matrix.hh@{matrix.hh}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!matrix.hh@{matrix.hh}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$()}{operator>>()}}
+{\footnotesize\ttfamily template$<$unsigned int S\+I\+ZE$>$ \\
+std\+::istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in,  }\item[{\mbox{\hyperlink{class_matrix}{Matrix}}$<$ S\+I\+ZE $>$ \&}]{mat }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parametry}
+{\em in} & Strumien wyjsciowy \\
+\hline
+{\em mat} & macierz \\
+\hline
+\end{DoxyParams}

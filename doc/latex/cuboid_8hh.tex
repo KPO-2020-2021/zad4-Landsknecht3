@@ -1,0 +1,82 @@
+\hypertarget{cuboid_8hh}{}\doxysection{Dokumentacja pliku cuboid.\+hh}
+\label{cuboid_8hh}\index{cuboid.hh@{cuboid.hh}}
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include \char`\"{}size.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}matrix3x3.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}vector3\+D.\+hh\char`\"{}}\newline
+Wykres zależności załączania dla cuboid.\+hh\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cuboid_8hh__incl}
+\end{center}
+\end{figure}
+Ten wykres pokazuje, które pliki bezpośrednio lub pośrednio załączają ten plik\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{cuboid_8hh__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_cuboid}{Cuboid}}
+\begin{DoxyCompactList}\small\item\em Definicja klasy \mbox{\hyperlink{class_cuboid}{Cuboid}} Plik zawiera definicje i metody klasy \mbox{\hyperlink{class_cuboid}{Cuboid}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}} \& \mbox{\hyperlink{cuboid_8hh_a4342a9dfb4056d10380f6d3aeeb369c6}{operator$<$$<$}} (\mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}} \&out, \mbox{\hyperlink{class_cuboid}{Cuboid}} const \&c)
+\begin{DoxyCompactList}\small\item\em Przeciazenie operatora $<$$<$. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{cuboid_8hh_aa6f5d32d16e84501851ef30be5286c6b}{operator==}} (const \mbox{\hyperlink{class_cuboid}{Cuboid}} \&c1, const \mbox{\hyperlink{class_cuboid}{Cuboid}} \&c2)
+\begin{DoxyCompactList}\small\item\em Przeciazenie operatora ==. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{cuboid_8hh_a5d318e1e4941ba63e336f8a6fd1cc321}{operator==}} (const \mbox{\hyperlink{class_cuboid}{Cuboid}} \&c1, const \mbox{\hyperlink{vector3_d_8hh_a01090a0f6a3d1e7e9606819bd0fafda0}{Vector3D}} array\mbox{[}8\mbox{]})
+\begin{DoxyCompactList}\small\item\em Przeciazenie operatora ==. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja funkcji}
+\mbox{\Hypertarget{cuboid_8hh_a4342a9dfb4056d10380f6d3aeeb369c6}\label{cuboid_8hh_a4342a9dfb4056d10380f6d3aeeb369c6}} 
+\index{cuboid.hh@{cuboid.hh}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!cuboid.hh@{cuboid.hh}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}}\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}} \&}]{out,  }\item[{\mbox{\hyperlink{class_cuboid}{Cuboid}} const \&}]{c }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parametry}
+{\em out} & strumien wyjscia \\
+\hline
+{\em c} & prostopadloscian \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{cuboid_8hh_aa6f5d32d16e84501851ef30be5286c6b}\label{cuboid_8hh_aa6f5d32d16e84501851ef30be5286c6b}} 
+\index{cuboid.hh@{cuboid.hh}!operator==@{operator==}}
+\index{operator==@{operator==}!cuboid.hh@{cuboid.hh}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_cuboid}{Cuboid}} \&}]{c1,  }\item[{const \mbox{\hyperlink{class_cuboid}{Cuboid}} \&}]{c2 }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parametry}
+{\em c1} & pierwszy skladnik (prostopadloscian) \\
+\hline
+{\em c2} & drugi skladnik (prostopadloscian) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+wartosc bool mowiaca czy dane prostopadlosciany sa sobie rowne 
+\end{DoxyReturn}
+\mbox{\Hypertarget{cuboid_8hh_a5d318e1e4941ba63e336f8a6fd1cc321}\label{cuboid_8hh_a5d318e1e4941ba63e336f8a6fd1cc321}} 
+\index{cuboid.hh@{cuboid.hh}!operator==@{operator==}}
+\index{operator==@{operator==}!cuboid.hh@{cuboid.hh}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_cuboid}{Cuboid}} \&}]{c1,  }\item[{const \mbox{\hyperlink{vector3_d_8hh_a01090a0f6a3d1e7e9606819bd0fafda0}{Vector3D}}}]{array\mbox{[}8\mbox{]} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parametry}
+{\em c1} & pierwszy skladnik (prostopadloscian) \\
+\hline
+{\em array} & drugi skladnik (tablica wektorow) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+wartosc bool mowiaca czy elementy obiektu \mbox{\hyperlink{class_cuboid}{Cuboid}} sa rowne elementom tablicy jednoelementowej typu Vector3D 
+\end{DoxyReturn}

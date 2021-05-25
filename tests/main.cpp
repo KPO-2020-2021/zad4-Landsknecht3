@@ -57,14 +57,14 @@ TEST_CASE("ODEJMOWANIE WEKTOROW 2X2")
     v4 = v1 - v2;
     CHECK(v4 == v3);
 }
-TEST_CASE("ILOCZYN WEKTORA 2X2 I LICZBY")
+TEST_CASE("ILOCZYN WEKTORA 2X2 I LICZBY ZMIENNOPRZECINKOWEJ")
 {
     double tmp1[2] {2,4}; double a = 3.2;
     Vector2D v1(tmp1); double tmp[2] {6.4, 12.8};
     Vector2D v2 = v1 * a;
     CHECK(v2 == tmp);
 }
-TEST_CASE("ILORAZ WEKTORA 2X2 I LICZBY")
+TEST_CASE("ILORAZ WEKTORA 2X2 I LICZBY ZMIENNOPRZECINKOWEJ")
 {
     double tmp1[2] {32, 84}; double a = 3.2;
     Vector2D v1(tmp1); double tmp[2] {10, 26.25};

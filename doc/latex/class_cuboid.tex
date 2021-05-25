@@ -1,0 +1,160 @@
+\hypertarget{class_cuboid}{}\doxysection{Dokumentacja klasy Cuboid}
+\label{class_cuboid}\index{Cuboid@{Cuboid}}
+
+
+Definicja klasy \mbox{\hyperlink{class_cuboid}{Cuboid}} Plik zawiera definicje i metody klasy \mbox{\hyperlink{class_cuboid}{Cuboid}}.  
+
+
+
+
+{\ttfamily \#include $<$cuboid.\+hh$>$}
+
+
+
+Diagram współpracy dla Cuboid\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{class_cuboid__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cuboid_a1abf60e93d024b7a01ee5b1a48f1f08a}{Cuboid}} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor bezparametryczny klasy \mbox{\hyperlink{class_cuboid}{Cuboid}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_cuboid_a7aa4896a36c2b465811a7fb51324acd8}{Cuboid}} (\mbox{\hyperlink{vector3_d_8hh_a01090a0f6a3d1e7e9606819bd0fafda0}{Vector3D}} v\mbox{[}\mbox{\hyperlink{size_8hh_ac4d27db1a252bd70077c23bd58d7218a}{A\+P\+I\+C\+ES}}\mbox{]})
+\begin{DoxyCompactList}\small\item\em Konstruktor parametryczny klasy \mbox{\hyperlink{class_cuboid}{Cuboid}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_cuboid}{Cuboid}} \mbox{\hyperlink{class_cuboid_a3062a2525bd7e956ab38641c34920d50}{rotation}} (const \mbox{\hyperlink{matrix3x3_8hh_ac0b1a54ceafb28519afcbd8939668a70}{Matrix3x3}} m)
+\begin{DoxyCompactList}\small\item\em Realizuje rotacje prostopadloscianu. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_cuboid}{Cuboid}} \mbox{\hyperlink{class_cuboid_a0ca9537557489b1b859376a9245d39bc}{translation}} (\mbox{\hyperlink{vector3_d_8hh_a01090a0f6a3d1e7e9606819bd0fafda0}{Vector3D}} v)
+\begin{DoxyCompactList}\small\item\em Realizuje przesuniecia prostopadloscianu o wektor. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{vector3_d_8hh_a01090a0f6a3d1e7e9606819bd0fafda0}{Vector3D}} \& \mbox{\hyperlink{class_cuboid_a9757b922ca7c2983942fc1604d8fe1fb}{operator\mbox{[}$\,$\mbox{]}}} (unsigned int index) const
+\begin{DoxyCompactList}\small\item\em Funktor prostopadloscianu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cuboid_a4e8c9c8494b7d667080ae2c3191e7baf}{sides}} ()
+\begin{DoxyCompactList}\small\item\em Oblicza, porownuje i wyswietla wartosci przeciwleglych bokow prostopadloscianu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{vector3_d_8hh_a01090a0f6a3d1e7e9606819bd0fafda0}{Vector3D}} \mbox{\hyperlink{class_cuboid_a5c505bf0e933b9ed86fb0603b04de07a}{cub}} \mbox{[}\mbox{\hyperlink{size_8hh_ac4d27db1a252bd70077c23bd58d7218a}{A\+P\+I\+C\+ES}}\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsection*{Przyjaciele}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}} \& \mbox{\hyperlink{class_cuboid_a4342a9dfb4056d10380f6d3aeeb369c6}{operator$<$$<$}} (\mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}} \&out, \mbox{\hyperlink{class_cuboid}{Cuboid}} const \&c)
+\begin{DoxyCompactList}\small\item\em Przeciazenie operatora $<$$<$. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\mbox{\Hypertarget{class_cuboid_a1abf60e93d024b7a01ee5b1a48f1f08a}\label{class_cuboid_a1abf60e93d024b7a01ee5b1a48f1f08a}} 
+\index{Cuboid@{Cuboid}!Cuboid@{Cuboid}}
+\index{Cuboid@{Cuboid}!Cuboid@{Cuboid}}
+\doxysubsubsection{\texorpdfstring{Cuboid()}{Cuboid()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Cuboid\+::\+Cuboid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Zwraca}
+Obiekt klasy \mbox{\hyperlink{class_cuboid}{Cuboid}}, ktorego elementy maja wartosc 0 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_cuboid_a7aa4896a36c2b465811a7fb51324acd8}\label{class_cuboid_a7aa4896a36c2b465811a7fb51324acd8}} 
+\index{Cuboid@{Cuboid}!Cuboid@{Cuboid}}
+\index{Cuboid@{Cuboid}!Cuboid@{Cuboid}}
+\doxysubsubsection{\texorpdfstring{Cuboid()}{Cuboid()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Cuboid\+::\+Cuboid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{vector3_d_8hh_a01090a0f6a3d1e7e9606819bd0fafda0}{Vector3D}}}]{v\mbox{[}\+A\+P\+I\+C\+E\+S\mbox{]} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parametry}
+{\em v} & tablica wektorow (wektory odpowiadaja wierzcholkom prostopadloscianu) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Obiekt klasy \mbox{\hyperlink{class_cuboid}{Cuboid}} ktorego elementy maja wartosc elementow tablicy wektorow v 
+\end{DoxyReturn}
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_cuboid_a9757b922ca7c2983942fc1604d8fe1fb}\label{class_cuboid_a9757b922ca7c2983942fc1604d8fe1fb}} 
+\index{Cuboid@{Cuboid}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Cuboid@{Cuboid}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{vector3_d_8hh_a01090a0f6a3d1e7e9606819bd0fafda0}{Vector3D}} \& Cuboid\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{unsigned int}]{index }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyParams}{Parametry}
+{\em index} & numer wierzcholka \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Wektor oznaczajacy wierzcholek prostopadloscianu 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_cuboid_a3062a2525bd7e956ab38641c34920d50}\label{class_cuboid_a3062a2525bd7e956ab38641c34920d50}} 
+\index{Cuboid@{Cuboid}!rotation@{rotation}}
+\index{rotation@{rotation}!Cuboid@{Cuboid}}
+\doxysubsubsection{\texorpdfstring{rotation()}{rotation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_cuboid}{Cuboid}} Cuboid\+::rotation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{matrix3x3_8hh_ac0b1a54ceafb28519afcbd8939668a70}{Matrix3x3}}}]{m }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parametry}
+{\em m} & macierz obrotu \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Prostopadloscian po rotacji 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_cuboid_a4e8c9c8494b7d667080ae2c3191e7baf}\label{class_cuboid_a4e8c9c8494b7d667080ae2c3191e7baf}} 
+\index{Cuboid@{Cuboid}!sides@{sides}}
+\index{sides@{sides}!Cuboid@{Cuboid}}
+\doxysubsubsection{\texorpdfstring{sides()}{sides()}}
+{\footnotesize\ttfamily void Cuboid\+::sides (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parametry}
+{\em this} & prostopadloscian ktorego boki sa porownywane \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Wyswietla komunikat mowiacy czy boki prostopadloscianu sa rowne czy nie oraz ich wartosci 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_cuboid_a0ca9537557489b1b859376a9245d39bc}\label{class_cuboid_a0ca9537557489b1b859376a9245d39bc}} 
+\index{Cuboid@{Cuboid}!translation@{translation}}
+\index{translation@{translation}!Cuboid@{Cuboid}}
+\doxysubsubsection{\texorpdfstring{translation()}{translation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_cuboid}{Cuboid}} Cuboid\+::translation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{vector3_d_8hh_a01090a0f6a3d1e7e9606819bd0fafda0}{Vector3D}}}]{v }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parametry}
+{\em v} & wektor przesuniecia \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Prostopadloscian przesuniety o wektor 
+\end{DoxyReturn}
+
+
+\doxysubsection{Dokumentacja przyjaciół i funkcji związanych}
+\mbox{\Hypertarget{class_cuboid_a4342a9dfb4056d10380f6d3aeeb369c6}\label{class_cuboid_a4342a9dfb4056d10380f6d3aeeb369c6}} 
+\index{Cuboid@{Cuboid}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Cuboid@{Cuboid}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily \mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}}\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}} \&}]{out,  }\item[{\mbox{\hyperlink{class_cuboid}{Cuboid}} const \&}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+\begin{DoxyParams}{Parametry}
+{\em out} & strumien wyjscia \\
+\hline
+{\em c} & prostopadloscian \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\mbox{\Hypertarget{class_cuboid_a5c505bf0e933b9ed86fb0603b04de07a}\label{class_cuboid_a5c505bf0e933b9ed86fb0603b04de07a}} 
+\index{Cuboid@{Cuboid}!cub@{cub}}
+\index{cub@{cub}!Cuboid@{Cuboid}}
+\doxysubsubsection{\texorpdfstring{cub}{cub}}
+{\footnotesize\ttfamily \mbox{\hyperlink{vector3_d_8hh_a01090a0f6a3d1e7e9606819bd0fafda0}{Vector3D}} Cuboid\+::cub\mbox{[}\mbox{\hyperlink{size_8hh_ac4d27db1a252bd70077c23bd58d7218a}{A\+P\+I\+C\+ES}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{cuboid_8hh}{cuboid.\+hh}}\end{DoxyCompactItemize}

@@ -1,0 +1,112 @@
+\hypertarget{vector_8hh}{}\doxysection{Dokumentacja pliku vector.\+hh}
+\label{vector_8hh}\index{vector.hh@{vector.hh}}
+
+
+Szablon klasy vector Plik zawiera odpowiednie metody szablonu klasy vector.  
+
+
+{\ttfamily \#include \char`\"{}size.\+hh\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+Wykres zależności załączania dla vector.\+hh\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{vector_8hh__incl}
+\end{center}
+\end{figure}
+Ten wykres pokazuje, które pliki bezpośrednio lub pośrednio załączają ten plik\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{vector_8hh__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_vector}{Vector$<$ S\+I\+Z\+E $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$unsigned int S\+I\+ZE$>$ }\\\mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}} \& \mbox{\hyperlink{vector_8hh_a40438eb1a5d973fe252716b1fa1782a6}{operator$<$$<$}} (\mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}} \&out, \mbox{\hyperlink{class_vector}{Vector}}$<$ S\+I\+ZE $>$ const \&tmp)
+\begin{DoxyCompactList}\small\item\em Przeciazenie operatora $<$$<$. \end{DoxyCompactList}\item 
+{\footnotesize template$<$unsigned int S\+I\+ZE$>$ }\\std\+::istream \& \mbox{\hyperlink{vector_8hh_a412042bc7871632cd4d1322edd9543aa}{operator$>$$>$}} (std\+::istream \&in, \mbox{\hyperlink{class_vector}{Vector}}$<$ S\+I\+ZE $>$ \&tmp)
+\begin{DoxyCompactList}\small\item\em Przeciazenie operatora $>$$>$ \end{DoxyCompactList}\item 
+{\footnotesize template$<$unsigned int S\+I\+ZE$>$ }\\bool \mbox{\hyperlink{vector_8hh_a5f454c3f5cbc79803b07d3b3b04018df}{operator==}} (const \mbox{\hyperlink{class_vector}{Vector}}$<$ S\+I\+ZE $>$ \&v1, const \mbox{\hyperlink{class_vector}{Vector}}$<$ S\+I\+ZE $>$ \&v2)
+\begin{DoxyCompactList}\small\item\em Przeciazenie operatora ==. \end{DoxyCompactList}\item 
+{\footnotesize template$<$unsigned int S\+I\+ZE$>$ }\\bool \mbox{\hyperlink{vector_8hh_a57bda4b670f4153b51506c7b9ba1c208}{operator==}} (const \mbox{\hyperlink{class_vector}{Vector}}$<$ S\+I\+ZE $>$ \&v1, const double tmp\mbox{[}S\+I\+ZE\mbox{]})
+\begin{DoxyCompactList}\small\item\em Przeciazenie operatora ==. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja funkcji}
+\mbox{\Hypertarget{vector_8hh_a40438eb1a5d973fe252716b1fa1782a6}\label{vector_8hh_a40438eb1a5d973fe252716b1fa1782a6}} 
+\index{vector.hh@{vector.hh}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!vector.hh@{vector.hh}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily template$<$unsigned int S\+I\+ZE$>$ \\
+\mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}}\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}} \&}]{out,  }\item[{\mbox{\hyperlink{class_vector}{Vector}}$<$ S\+I\+ZE $>$ const \&}]{tmp }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parametry}
+{\em out} & Strumien wyjsciowy \\
+\hline
+{\em tmp} & Wektor \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vector_8hh_a57bda4b670f4153b51506c7b9ba1c208}\label{vector_8hh_a57bda4b670f4153b51506c7b9ba1c208}} 
+\index{vector.hh@{vector.hh}!operator==@{operator==}}
+\index{operator==@{operator==}!vector.hh@{vector.hh}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int S\+I\+ZE$>$ \\
+bool operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector}{Vector}}$<$ S\+I\+ZE $>$ \&}]{v1,  }\item[{const double}]{tmp\mbox{[}\+S\+I\+Z\+E\mbox{]} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parametry}
+{\em v1} & Pierwszy skladnik operatora (wektor) \\
+\hline
+{\em tmp} & Drugi skladnik operatora (tablica jednowymiarowa typu double) \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{Zobacz również}
+Plik \mbox{\hyperlink{size_8hh}{size.\+hh}} odnosnie \mbox{\hyperlink{size_8hh_aa9387612e1b1ad9451eaddc21ceae7fc}{epsilon}} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Zwraca}
+zwraca wartosc typu bool przekazujaca czy wektory i tablica posiadaja te same wartosci 
+\end{DoxyReturn}
+\mbox{\Hypertarget{vector_8hh_a5f454c3f5cbc79803b07d3b3b04018df}\label{vector_8hh_a5f454c3f5cbc79803b07d3b3b04018df}} 
+\index{vector.hh@{vector.hh}!operator==@{operator==}}
+\index{operator==@{operator==}!vector.hh@{vector.hh}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int S\+I\+ZE$>$ \\
+bool operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector}{Vector}}$<$ S\+I\+ZE $>$ \&}]{v1,  }\item[{const \mbox{\hyperlink{class_vector}{Vector}}$<$ S\+I\+ZE $>$ \&}]{v2 }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parametry}
+{\em v1} & Pierwszy skladnik operatora (wektor) \\
+\hline
+{\em v2} & Drugi skladnik operatora (wektor) \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{Zobacz również}
+Plik \mbox{\hyperlink{size_8hh}{size.\+hh}} odnosnie \mbox{\hyperlink{size_8hh_aa9387612e1b1ad9451eaddc21ceae7fc}{epsilon}} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Zwraca}
+zwraca wartosc typu double przekazujaca czy wektory posiadaja te same wartosci 
+\end{DoxyReturn}
+\mbox{\Hypertarget{vector_8hh_a412042bc7871632cd4d1322edd9543aa}\label{vector_8hh_a412042bc7871632cd4d1322edd9543aa}} 
+\index{vector.hh@{vector.hh}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!vector.hh@{vector.hh}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$()}{operator>>()}}
+{\footnotesize\ttfamily template$<$unsigned int S\+I\+ZE$>$ \\
+std\+::istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in,  }\item[{\mbox{\hyperlink{class_vector}{Vector}}$<$ S\+I\+ZE $>$ \&}]{tmp }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parametry}
+{\em in} & Strumien wejsciowy \\
+\hline
+{\em tmp} & Wektor \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,14 @@
+<map id="size.hh" name="size.hh">
+<area shape="rect" id="node1" title="Plik z stalymi Plik zawiera stale potrzebne w programie lub upraszczajace jego czytelnosc." alt="" coords="175,5,243,32"/>
+<area shape="rect" id="node2" href="$cuboid_8hh.html" title=" " alt="" coords="33,304,118,331"/>
+<area shape="rect" id="node5" href="$matrix_8hh.html" title="Szablon klasy matrix Plik zawiera odpowiednie metody szablonu klasy matrix." alt="" coords="166,155,252,181"/>
+<area shape="rect" id="node9" href="$vector_8hh.html" title="Szablon klasy vector Plik zawiera odpowiednie metody szablonu klasy vector." alt="" coords="246,80,329,107"/>
+<area shape="rect" id="node3" href="$app_2main_8cpp.html" title=" " alt="" coords="130,379,213,405"/>
+<area shape="rect" id="node4" href="$cuboid_8cpp.html" title=" " alt="" coords="14,379,106,405"/>
+<area shape="rect" id="node6" href="$matrix3x3_8hh.html" title="Definicja klasy Matrix3x3 korzystajaca z szablonu matrix." alt="" coords="21,229,130,256"/>
+<area shape="rect" id="node8" href="$matrix2x2_8hh.html" title="Definicja klasy Matrix2x2 korzystajaca z szablonu matrix." alt="" coords="154,229,264,256"/>
+<area shape="rect" id="node7" href="$matrix_8cpp.html" title=" " alt="" coords="204,304,296,331"/>
+<area shape="rect" id="node10" href="$vector3_d_8hh.html" title="Definicja klasy Vector3D korzystajaca z szablonu vector." alt="" coords="288,229,389,256"/>
+<area shape="rect" id="node12" href="$vector2_d_8hh.html" title="Definicja klasy Vector2D korzystajaca z szablonu vector." alt="" coords="413,229,514,256"/>
+<area shape="rect" id="node11" href="$tests_2main_8cpp.html" title=" " alt="" coords="397,304,480,331"/>
+</map>

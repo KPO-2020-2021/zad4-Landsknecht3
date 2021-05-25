@@ -1,0 +1,202 @@
+\hypertarget{class_vector}{}\doxysection{Dokumentacja szablonu klasy Vector$<$ S\+I\+ZE $>$}
+\label{class_vector}\index{Vector$<$ SIZE $>$@{Vector$<$ SIZE $>$}}
+
+
+{\ttfamily \#include $<$vector.\+hh$>$}
+
+
+
+Diagram dziedziczenia dla Vector$<$ S\+I\+ZE $>$\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{class_vector__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_vector_a518e3f753998a51d74c3079644367253}{Vector}} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \mbox{\hyperlink{class_vector}{Vector}} bezparametryczny. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector_a43d0cfaf5a6d5afd41146840f57169bd}{Vector}} (double\mbox{[}S\+I\+ZE\mbox{]})
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \mbox{\hyperlink{class_vector}{Vector}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector}{Vector}} \mbox{\hyperlink{class_vector_ad1d5214a42dc416eaa4012b8eac7783a}{operator+}} (const \mbox{\hyperlink{class_vector}{Vector}} \&v)
+\begin{DoxyCompactList}\small\item\em Realizuje dodawanie dwoch wektorow. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector}{Vector}} \mbox{\hyperlink{class_vector_a79c9c6c8f88b2f18492ffad1b03f07b9}{operator-\/}} (const \mbox{\hyperlink{class_vector}{Vector}} \&v)
+\begin{DoxyCompactList}\small\item\em Realizuje odejmowanie dwoch wektorow. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector}{Vector}} \mbox{\hyperlink{class_vector_ad5503a44a680461e85cd59e32018b7bd}{operator$\ast$}} (const double \&mul)
+\begin{DoxyCompactList}\small\item\em Realizuje mnozenie wektora przez liczbe zmiennoprzecinkowa. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector}{Vector}} \mbox{\hyperlink{class_vector_a6320f4f74074f18bd91f553e8dc8d625}{operator/}} (const double \&div)
+\begin{DoxyCompactList}\small\item\em Realizuje dzielenie wektora przez liczbe zmiennoprzecinkowa. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_vector_a230e88c1d8f2b0c38f9cdb54a646e727}{length}} (const \mbox{\hyperlink{class_vector}{Vector}} \&v)
+\begin{DoxyCompactList}\small\item\em Funkcja obliczajaca dlugosc wektora bedacego roznica dwoch wektorow. \end{DoxyCompactList}\item 
+const double \& \mbox{\hyperlink{class_vector_a8e9c843a70ca192dc8e91e610673b771}{operator\mbox{[}$\,$\mbox{]}}} (unsigned int index) const
+\begin{DoxyCompactList}\small\item\em Funktor wektora. \end{DoxyCompactList}\item 
+double \& \mbox{\hyperlink{class_vector_a98bbb8bbe6bfc7326aa4d32801530777}{operator\mbox{[}$\,$\mbox{]}}} (unsigned int index)
+\begin{DoxyCompactList}\small\item\em Funktor wektora. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_vector_a61919c1bbd64cba224afb8b6a3142fc9}{coor}} \mbox{[}S\+I\+ZE\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\mbox{\Hypertarget{class_vector_a518e3f753998a51d74c3079644367253}\label{class_vector_a518e3f753998a51d74c3079644367253}} 
+\index{Vector$<$ SIZE $>$@{Vector$<$ SIZE $>$}!Vector@{Vector}}
+\index{Vector@{Vector}!Vector$<$ SIZE $>$@{Vector$<$ SIZE $>$}}
+\doxysubsubsection{\texorpdfstring{Vector()}{Vector()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int S\+I\+ZE$>$ \\
+\mbox{\hyperlink{class_vector}{Vector}}$<$ S\+I\+ZE $>$\+::\mbox{\hyperlink{class_vector}{Vector}}}
+
+\begin{DoxyReturn}{Zwraca}
+Tablice wypelniona wartoscia 0 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vector_a43d0cfaf5a6d5afd41146840f57169bd}\label{class_vector_a43d0cfaf5a6d5afd41146840f57169bd}} 
+\index{Vector$<$ SIZE $>$@{Vector$<$ SIZE $>$}!Vector@{Vector}}
+\index{Vector@{Vector}!Vector$<$ SIZE $>$@{Vector$<$ SIZE $>$}}
+\doxysubsubsection{\texorpdfstring{Vector()}{Vector()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int S\+I\+ZE$>$ \\
+\mbox{\hyperlink{class_vector}{Vector}}$<$ S\+I\+ZE $>$\+::\mbox{\hyperlink{class_vector}{Vector}} (\begin{DoxyParamCaption}\item[{double}]{tmp\mbox{[}\+S\+I\+Z\+E\mbox{]} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parametry}
+{\em tmp} & tablica jednowymiarowa typu double \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Tablice wypelniona wartosciami podanymi w argumencie 
+\end{DoxyReturn}
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_vector_a230e88c1d8f2b0c38f9cdb54a646e727}\label{class_vector_a230e88c1d8f2b0c38f9cdb54a646e727}} 
+\index{Vector$<$ SIZE $>$@{Vector$<$ SIZE $>$}!length@{length}}
+\index{length@{length}!Vector$<$ SIZE $>$@{Vector$<$ SIZE $>$}}
+\doxysubsubsection{\texorpdfstring{length()}{length()}}
+{\footnotesize\ttfamily template$<$unsigned int S\+I\+ZE$>$ \\
+double \mbox{\hyperlink{class_vector}{Vector}}$<$ S\+I\+ZE $>$\+::length (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector}{Vector}}$<$ S\+I\+ZE $>$ \&}]{v }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parametry}
+{\em this} & pierwszy skladnik (wektor) \\
+\hline
+{\em v} & drugi skladnik (wektor) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+liczba zmiennoprzecinkowa typu double 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vector_ad5503a44a680461e85cd59e32018b7bd}\label{class_vector_ad5503a44a680461e85cd59e32018b7bd}} 
+\index{Vector$<$ SIZE $>$@{Vector$<$ SIZE $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Vector$<$ SIZE $>$@{Vector$<$ SIZE $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily template$<$unsigned int S\+I\+ZE$>$ \\
+\mbox{\hyperlink{class_vector}{Vector}}$<$ S\+I\+ZE $>$ \mbox{\hyperlink{class_vector}{Vector}}$<$ S\+I\+ZE $>$\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const double \&}]{mul }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parametry}
+{\em this} & pierwszy skladnik mnozenia (wektor) \\
+\hline
+{\em mul} & drugi skladnik mnozenia (liczba typu double)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Iloczyn dwoch skladnikow przekazanych jako wskaznik na parametr 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vector_ad1d5214a42dc416eaa4012b8eac7783a}\label{class_vector_ad1d5214a42dc416eaa4012b8eac7783a}} 
+\index{Vector$<$ SIZE $>$@{Vector$<$ SIZE $>$}!operator+@{operator+}}
+\index{operator+@{operator+}!Vector$<$ SIZE $>$@{Vector$<$ SIZE $>$}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily template$<$unsigned int S\+I\+ZE$>$ \\
+\mbox{\hyperlink{class_vector}{Vector}}$<$ S\+I\+ZE $>$ \mbox{\hyperlink{class_vector}{Vector}}$<$ S\+I\+ZE $>$\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector}{Vector}}$<$ S\+I\+ZE $>$ \&}]{v }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parametry}
+{\em this} & pierwszy skladnik dodawania \\
+\hline
+{\em v} & drugi skladnik dodawania\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Sume dwoch skladnikow przekazanych jako wskaznik na parametr 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vector_a79c9c6c8f88b2f18492ffad1b03f07b9}\label{class_vector_a79c9c6c8f88b2f18492ffad1b03f07b9}} 
+\index{Vector$<$ SIZE $>$@{Vector$<$ SIZE $>$}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Vector$<$ SIZE $>$@{Vector$<$ SIZE $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily template$<$unsigned int S\+I\+ZE$>$ \\
+\mbox{\hyperlink{class_vector}{Vector}}$<$ S\+I\+ZE $>$ \mbox{\hyperlink{class_vector}{Vector}}$<$ S\+I\+ZE $>$\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector}{Vector}}$<$ S\+I\+ZE $>$ \&}]{v }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parametry}
+{\em this} & pierwszy skladnik odejmowania \\
+\hline
+{\em v} & drugi skladnik odejmowania\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Roznice dwoch skladnikow przekazanych jako wskaznik na parametr 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vector_a6320f4f74074f18bd91f553e8dc8d625}\label{class_vector_a6320f4f74074f18bd91f553e8dc8d625}} 
+\index{Vector$<$ SIZE $>$@{Vector$<$ SIZE $>$}!operator/@{operator/}}
+\index{operator/@{operator/}!Vector$<$ SIZE $>$@{Vector$<$ SIZE $>$}}
+\doxysubsubsection{\texorpdfstring{operator/()}{operator/()}}
+{\footnotesize\ttfamily template$<$unsigned int S\+I\+ZE$>$ \\
+\mbox{\hyperlink{class_vector}{Vector}}$<$ S\+I\+ZE $>$ \mbox{\hyperlink{class_vector}{Vector}}$<$ S\+I\+ZE $>$\+::operator/ (\begin{DoxyParamCaption}\item[{const double \&}]{div }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parametry}
+{\em this} & pierwszy skladnik dzielenie (wektor) \\
+\hline
+{\em div} & drugi skladnik dzielenie (liczba typu double)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Iloraz dwoch skladnikow przekazanych jako wskaznik na parametr 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vector_a98bbb8bbe6bfc7326aa4d32801530777}\label{class_vector_a98bbb8bbe6bfc7326aa4d32801530777}} 
+\index{Vector$<$ SIZE $>$@{Vector$<$ SIZE $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Vector$<$ SIZE $>$@{Vector$<$ SIZE $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int S\+I\+ZE$>$ \\
+double \& \mbox{\hyperlink{class_vector}{Vector}}$<$ S\+I\+ZE $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{unsigned int}]{index }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parametry}
+{\em index} & index wektora\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Wartosc wektora w danym miejscu tablicy 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vector_a8e9c843a70ca192dc8e91e610673b771}\label{class_vector_a8e9c843a70ca192dc8e91e610673b771}} 
+\index{Vector$<$ SIZE $>$@{Vector$<$ SIZE $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Vector$<$ SIZE $>$@{Vector$<$ SIZE $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int S\+I\+ZE$>$ \\
+const double \& \mbox{\hyperlink{class_vector}{Vector}}$<$ S\+I\+ZE $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{unsigned int}]{index }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyParams}{Parametry}
+{\em index} & index wektora\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Wartosc wektora w danym miejscu tablicy jako stala 
+\end{DoxyReturn}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\mbox{\Hypertarget{class_vector_a61919c1bbd64cba224afb8b6a3142fc9}\label{class_vector_a61919c1bbd64cba224afb8b6a3142fc9}} 
+\index{Vector$<$ SIZE $>$@{Vector$<$ SIZE $>$}!coor@{coor}}
+\index{coor@{coor}!Vector$<$ SIZE $>$@{Vector$<$ SIZE $>$}}
+\doxysubsubsection{\texorpdfstring{coor}{coor}}
+{\footnotesize\ttfamily template$<$unsigned int S\+I\+ZE$>$ \\
+double \mbox{\hyperlink{class_vector}{Vector}}$<$ S\+I\+ZE $>$\+::coor\mbox{[}S\+I\+ZE\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{vector_8hh}{vector.\+hh}}\end{DoxyCompactItemize}

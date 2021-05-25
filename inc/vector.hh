@@ -1,5 +1,8 @@
 #pragma once
-
+/** \file 
+ * \brief Szablon klasy vector 
+ * Plik zawiera odpowiednie metody szablonu klasy vector
+*/
 #include "size.hh"
 #include <iostream>
 #include <iomanip>
@@ -11,6 +14,7 @@ class Vector
 private:
     double coor[SIZE];
 public:
+
     Vector();
 
     Vector(double [SIZE]);
@@ -32,13 +36,10 @@ public:
 };
 
 
-/******************************************************************************
- |  Konstruktor klasy Vector.                                                 |
- |  Argumenty:                                                                |
- |      Brak argumentow.                                                      |
- |  Zwraca:                                                                   |
- |      Tablice wypelniona wartoscia 0.                                       |
- */
+
+/** \brief Konstruktor klasy Vector bezparametryczny
+ * @return Tablice wypelniona wartoscia 0
+*/
 template<unsigned int SIZE>
 Vector<SIZE>::Vector() {
     for (unsigned int i = 0; i < SIZE; ++i) {
@@ -47,13 +48,10 @@ Vector<SIZE>::Vector() {
 }
 
 
-/******************************************************************************
- |  Konstruktor klasy Vector.                                                 |
- |  Argumenty:                                                                |
- |      tmp - Jednowymiarowa tablica typu double.                             |
- |  Zwraca:                                                                   |
- |      Tablice wypelniona wartosciami podanymi w argumencie.                 |
- */
+/** \brief Konstruktor klasy Vector
+ * @param tmp tablica jednowymiarowa typu double
+ * @return Tablice wypelniona wartosciami podanymi w argumencie
+*/
 
 template< unsigned int SIZE>
 Vector< SIZE>::Vector(double tmp[SIZE]) {
@@ -63,15 +61,12 @@ Vector< SIZE>::Vector(double tmp[SIZE]) {
 }
 
 
-/******************************************************************************
- |  Realizuje dodawanie dwoch wektorow.                                       |
- |  Argumenty:                                                                |
- |      this - pierwszy skladnik dodawania,                                   |
- |      v - drugi skladnik dodawania.                                         |
- |  Zwraca:                                                                   |
- |      Sume dwoch skladnikow przekazanych jako wskaznik                      |
- |      na parametr.                                                          |
- */
+/** \brief Realizuje dodawanie dwoch wektorow
+ * @param this pierwszy skladnik dodawania
+ * @param v drugi skladnik dodawania
+ *  
+ * @return Sume dwoch skladnikow przekazanych jako wskaznik na parametr
+*/
 template< unsigned int SIZE>
 Vector< SIZE> Vector< SIZE>::operator + (const Vector &v) {
     Vector result;
@@ -82,15 +77,13 @@ Vector< SIZE> Vector< SIZE>::operator + (const Vector &v) {
 }
 
 
-/******************************************************************************
- |  Realizuje odejmowanie dwoch wektorow.                                     |
- |  Argumenty:                                                                |
- |      this - pierwszy skladnik odejmowania,                                 |
- |      v - drugi skladnik odejmowania.                                       |
- |  Zwraca:                                                                   |
- |      Roznice dwoch skladnikow przekazanych jako wskaznik                   |
- |      na parametr.                                                          |
- */
+
+/** \brief Realizuje odejmowanie dwoch wektorow
+ * @param this pierwszy skladnik odejmowania
+ * @param v drugi skladnik odejmowania
+ *  
+ * @return Roznice dwoch skladnikow przekazanych jako wskaznik na parametr
+*/
 template< unsigned int SIZE>
 Vector< SIZE> Vector< SIZE>::operator - (const Vector &v) {
     Vector result;
@@ -101,16 +94,12 @@ Vector< SIZE> Vector< SIZE>::operator - (const Vector &v) {
 }
 
 
-/******************************************************************************
- |  Realizuje mnozenie wektora przez liczbe zmiennoprzecinkowa.               |
- |  Argumenty:                                                                |
- |      this - pierwszy skladnik mnozenia (wektor),                           |
- |      v - drugi skladnik mnozenia (liczba typu double).                     |
- |  Zwraca:                                                                   |
- |      Iloczyn dwoch skladnikow przekazanych jako wskaznik                   |
- |      na parametr.                                                          |
- */
-
+/** \brief Realizuje mnozenie wektora przez liczbe zmiennoprzecinkowa
+ * @param this pierwszy skladnik mnozenia (wektor)
+ * @param mul drugi skladnik mnozenia (liczba typu double)
+ *  
+ * @return Iloczyn dwoch skladnikow przekazanych jako wskaznik na parametr
+*/
 template< unsigned int SIZE>
 Vector< SIZE> Vector< SIZE>::operator * (const double &mul) {
     Vector result;
@@ -121,16 +110,12 @@ Vector< SIZE> Vector< SIZE>::operator * (const double &mul) {
 }
 
 
-/******************************************************************************
- |  Realizuje dzielenie dwoch wektorow.                                       |
- |  Argumenty:                                                                |
- |      this - licznik dzielenia,                                             |
- |      v - mianownik dzielenia.                                              |
- |  Zwraca:                                                                   |
- |      Iloraz dwoch skladnikow przekazanych jako wskaznik                    |
- |      na parametr.                                                          |
- */
-
+/** \brief Realizuje dzielenie wektora przez liczbe zmiennoprzecinkowa
+ * @param this pierwszy skladnik dzielenie (wektor)
+ * @param div drugi skladnik dzielenie (liczba typu double)
+ *  
+ * @return Iloraz dwoch skladnikow przekazanych jako wskaznik na parametr
+*/
 template< unsigned int SIZE>
 Vector< SIZE> Vector< SIZE>::operator / (const double &div) {
     Vector result;
@@ -143,41 +128,39 @@ Vector< SIZE> Vector< SIZE>::operator / (const double &div) {
 }
 
 
-/******************************************************************************
- |  Funktor wektora.                                                          |
- |  Argumenty:                                                                |
- |      index - index wektora.                                                |
- |  Zwraca:                                                                   |
- |      Wartosc wektora w danym miejscu tablicy jako stala.                   |
- */
+
+/** \brief Funktor wektora
+ * @param index index wektora
+ * 
+ * @return Wartosc  wektora w danym miejscu tablicy jako stala
+*/
 template< unsigned int SIZE>
 const double &Vector< SIZE>::operator [] (unsigned int index) const {
     if (index < 0 || index >= SIZE) {
         std::cerr << "Error: Wektor jest poza zasiegiem!" << std::endl;
-    } // lepiej byłoby rzucić wyjątkiem stdexcept
+    }
     return coor[index];
 }
 
 
-/******************************************************************************
- |  Funktor wektora.                                                          |
- |  Argumenty:                                                                |
- |      index - index wektora.                                                |
- |  Zwraca:                                                                   |
- |      Wartosc wektora w danym miejscu tablicy.                              |
- */
+
+/** \brief Funktor wektora
+ * @param index index wektora
+ * 
+ * @return Wartosc  wektora w danym miejscu tablicy
+*/
 template< unsigned int SIZE>
 double &Vector< SIZE>::operator[](unsigned int index) {
     return const_cast<double &>(const_cast<const Vector *>(this)->operator[](index));
 }
 
 
-/******************************************************************************
- |  Przeciazenie operatora <<                                                 |
- |  Argumenty:                                                                |
- |      out - strumien wejsciowy,                                             |
- |      tmp - wektor.                                                         |
- */
+
+/** \brief Przeciazenie operatora <<
+ * @param out Strumien wyjsciowy
+ * @param tmp Wektor 
+ * 
+*/
 template< unsigned int SIZE>
 std::ostream &operator << (std::ostream &out, Vector< SIZE> const &tmp) {
     for (unsigned int i = 0; i < SIZE; ++i) {
@@ -187,12 +170,12 @@ std::ostream &operator << (std::ostream &out, Vector< SIZE> const &tmp) {
 }
 
 
-/******************************************************************************
- |  Przeciazenie operatora >>                                                 |
- |  Argumenty:                                                                |
- |      in - strumien wyjsciowy,                                              |
- |      tmp - wektor.                                                         |
- */
+
+/** \brief Przeciazenie operatora >>
+ * @param in Strumien wejsciowy
+ * @param tmp Wektor 
+ * 
+*/
 template< unsigned int SIZE>
 std::istream &operator >> (std::istream &in, Vector< SIZE> &tmp) {
     for (unsigned int i = 0; i < SIZE; ++i) {
@@ -202,6 +185,12 @@ std::istream &operator >> (std::istream &in, Vector< SIZE> &tmp) {
     return in;
 }
 
+/** \brief Przeciazenie operatora ==
+ * @param v1 Pierwszy skladnik operatora (wektor)
+ * @param v2 Drugi skladnik operatora (wektor) 
+ * @see Plik size.hh odnosnie epsilon
+ * @return zwraca wartosc typu double przekazujaca czy wektory posiadaja te same wartosci
+*/
 template< unsigned int SIZE>
 bool operator ==(const Vector< SIZE> &v1, const Vector< SIZE> &v2)
 {
@@ -212,7 +201,12 @@ bool operator ==(const Vector< SIZE> &v1, const Vector< SIZE> &v2)
     return true;
 }
 
-
+/** \brief Przeciazenie operatora ==
+ * @param v1 Pierwszy skladnik operatora (wektor)
+ * @param tmp Drugi skladnik operatora (tablica jednowymiarowa typu double) 
+ * @see Plik size.hh odnosnie epsilon
+ * @return zwraca wartosc typu bool przekazujaca czy wektory i tablica posiadaja te same wartosci
+*/
 template< unsigned int SIZE>
 bool operator ==(const Vector< SIZE> &v1, const double tmp[SIZE])
 {
@@ -223,6 +217,11 @@ bool operator ==(const Vector< SIZE> &v1, const double tmp[SIZE])
     return true;
 }
 
+/** \brief Funkcja obliczajaca dlugosc wektora bedacego roznica dwoch wektorow
+ * @param this pierwszy skladnik (wektor)
+ * @param v drugi skladnik (wektor) 
+ * @return liczba zmiennoprzecinkowa typu double
+*/
 template<unsigned int SIZE>
 double Vector<SIZE>::length(const Vector &v)
 {   

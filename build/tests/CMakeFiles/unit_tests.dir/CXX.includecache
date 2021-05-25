@@ -6,9 +6,41 @@
 
 #IncludeRegexTransform: 
 
+../inc/cuboid.hh
+iomanip
+-
+size.hh
+../inc/size.hh
+matrix3x3.hh
+../inc/matrix3x3.hh
+vector3D.hh
+../inc/vector3D.hh
+
 ../inc/example.h
 ../tests/doctest/doctest.h
 ../tests/doctest/doctest.h
+
+../inc/matrix.hh
+size.hh
+../inc/size.hh
+vector.hh
+../inc/vector.hh
+iostream
+-
+iomanip
+-
+cstdlib
+-
+cmath
+-
+
+../inc/matrix2x2.hh
+matrix.hh
+../inc/matrix.hh
+
+../inc/matrix3x3.hh
+matrix.hh
+../inc/matrix.hh
 
 ../inc/size.hh
 
@@ -29,6 +61,14 @@ vector.hh
 ../inc/vector3D.hh
 vector.hh
 ../inc/vector.hh
+
+/home/mikubed/semestr2/zad4-Landsknecht3/tests/cuboid.cpp
+../tests/doctest/doctest.h
+/home/mikubed/semestr2/zad4-Landsknecht3/tests/doctest/doctest.h
+example.h
+/home/mikubed/semestr2/zad4-Landsknecht3/tests/example.h
+cuboid.hh
+/home/mikubed/semestr2/zad4-Landsknecht3/tests/cuboid.hh
 
 /home/mikubed/semestr2/zad4-Landsknecht3/tests/doctest/doctest.h
 signal.h
@@ -125,6 +165,20 @@ example.h
 /home/mikubed/semestr2/zad4-Landsknecht3/tests/doctest/doctest.h
 dummy.cpp
 /home/mikubed/semestr2/zad4-Landsknecht3/tests/dummy.cpp
+vector2D.hh
+/home/mikubed/semestr2/zad4-Landsknecht3/tests/vector2D.hh
+vector3D.hh
+/home/mikubed/semestr2/zad4-Landsknecht3/tests/vector3D.hh
+
+/home/mikubed/semestr2/zad4-Landsknecht3/tests/matrix.cpp
+../tests/doctest/doctest.h
+/home/mikubed/semestr2/zad4-Landsknecht3/tests/doctest/doctest.h
+example.h
+/home/mikubed/semestr2/zad4-Landsknecht3/tests/example.h
+matrix2x2.hh
+/home/mikubed/semestr2/zad4-Landsknecht3/tests/matrix2x2.hh
+matrix3x3.hh
+/home/mikubed/semestr2/zad4-Landsknecht3/tests/matrix3x3.hh
 vector2D.hh
 /home/mikubed/semestr2/zad4-Landsknecht3/tests/vector2D.hh
 vector3D.hh
